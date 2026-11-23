@@ -1,0 +1,73 @@
+# Vitest run 1 of 3 — command: npm test (vitest run --reporter=verbose)
+
+ RUN  v5.1.1 StarterLab04/counter-app
+
+ ✓ src/App.test.tsx > Counter application > TC-01: displays an initial count of 0 with all three buttons 68ms
+ ✓ src/App.test.tsx > Counter application > TC-02: Increment increases the count by 1 on each click 34ms
+ × src/App.test.tsx > Counter application > TC-03: Decrement decreases the count by 1 from the initial state 16ms
+   → expected 'Count: 1' to be 'Count: -1' // Object.is equality
+ × src/App.test.tsx > Counter application > TC-04: Decrement decreases the count by 1 from a positive value 28ms
+   → expected 'Count: 3' to be 'Count: 1' // Object.is equality
+ ✓ src/App.test.tsx > Counter application > TC-05: Reset returns the count to 0 after it has changed 31ms
+ × src/App.test.tsx > Counter application > TC-06: a sequence of Increment, Decrement and Reset produces the correct value at every step 36ms
+   → expected 'Count: 4' to be 'Count: 2' // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/App.test.tsx > Counter application > TC-03: Decrement decreases the count by 1 from the initial state
+AssertionError: expected 'Count: 1' to be 'Count: -1' // Object.is equality
+
+Expected: "Count: -1"
+Received: "Count: 1"
+
+ ❯ expectCount src/App.test.tsx:11:65
+      9| // Asserts the heading text exactly (e.g. "Count: 1" must not match "C…
+     10| function expectCount(value: number) {
+     11|   expect(screen.getByRole('heading', { level: 1 }).textContent).toBe(`…
+       |                                                                 ^
+     12| }
+     13|
+ ❯ src/App.test.tsx:49:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  src/App.test.tsx > Counter application > TC-04: Decrement decreases the count by 1 from a positive value
+AssertionError: expected 'Count: 3' to be 'Count: 1' // Object.is equality
+
+Expected: "Count: 1"
+Received: "Count: 3"
+
+ ❯ expectCount src/App.test.tsx:11:65
+      9| // Asserts the heading text exactly (e.g. "Count: 1" must not match "C…
+     10| function expectCount(value: number) {
+     11|   expect(screen.getByRole('heading', { level: 1 }).textContent).toBe(`…
+       |                                                                 ^
+     12| }
+     13|
+ ❯ src/App.test.tsx:60:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  src/App.test.tsx > Counter application > TC-06: a sequence of Increment, Decrement and Reset produces the correct value at every step
+AssertionError: expected 'Count: 4' to be 'Count: 2' // Object.is equality
+
+Expected: "Count: 2"
+Received: "Count: 4"
+
+ ❯ expectCount src/App.test.tsx:11:65
+      9| // Asserts the heading text exactly (e.g. "Count: 1" must not match "C…
+     10| function expectCount(value: number) {
+     11|   expect(screen.getByRole('heading', { level: 1 }).textContent).toBe(`…
+       |                                                                 ^
+     12| }
+     13|
+ ❯ src/App.test.tsx:84:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 3 passed (6)
+   Start at  03:06:33
+   Duration  836ms (environment 47%, tests 29%, setup 14%, transform 6%, import 4%)
+

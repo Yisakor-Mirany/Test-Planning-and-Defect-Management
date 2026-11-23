@@ -1,0 +1,19 @@
+Browser: Chromium 157.0.8103.78
+attempt 1 TC-01 PASS | initial="Count: 0"
+attempt 1 TC-02 PASS | initial="Count: 0" | Increment->exp 1 got "Count: 1" | Increment->exp 2 got "Count: 2"
+attempt 1 TC-03 FAIL | initial="Count: 0" | Decrement->exp -1 got "Count: 1" MISMATCH
+attempt 1 TC-04 FAIL | initial="Count: 0" | Increment->exp 1 got "Count: 1" | Increment->exp 2 got "Count: 2" | Decrement->exp 1 got "Count: 3" MISMATCH
+attempt 1 TC-05 PASS | initial="Count: 0" | Increment->exp 1 got "Count: 1" | Increment->exp 2 got "Count: 2" | Increment->exp 3 got "Count: 3" | Reset->exp 0 got "Count: 0"
+attempt 1 TC-06 FAIL | initial="Count: 0" | Increment->exp 1 got "Count: 1" | Increment->exp 2 got "Count: 2" | Increment->exp 3 got "Count: 3" | Decrement->exp 2 got "Count: 4" MISMATCH | Increment->exp 3 got "Count: 5" MISMATCH | Reset->exp 0 got "Count: 0"
+attempt 2 TC-01 PASS | initial="Count: 0"
+attempt 2 TC-02 PASS | initial="Count: 0" | Increment->exp 1 got "Count: 1" | Increment->exp 2 got "Count: 2"
+attempt 2 TC-03 FAIL | initial="Count: 0" | Decrement->exp -1 got "Count: 1" MISMATCH
+attempt 2 TC-04 FAIL | initial="Count: 0" | Increment->exp 1 got "Count: 1" | Increment->exp 2 got "Count: 2" | Decrement->exp 1 got "Count: 3" MISMATCH
+attempt 2 TC-05 PASS | initial="Count: 0" | Increment->exp 1 got "Count: 1" | Increment->exp 2 got "Count: 2" | Increment->exp 3 got "Count: 3" | Reset->exp 0 got "Count: 0"
+attempt 2 TC-06 FAIL | initial="Count: 0" | Increment->exp 1 got "Count: 1" | Increment->exp 2 got "Count: 2" | Increment->exp 3 got "Count: 3" | Decrement->exp 2 got "Count: 4" MISMATCH | Increment->exp 3 got "Count: 5" MISMATCH | Reset->exp 0 got "Count: 0"
+attempt 3 TC-01 PASS | initial="Count: 0"
+attempt 3 TC-02 PASS | initial="Count: 0" | Increment->exp 1 got "Count: 1" | Increment->exp 2 got "Count: 2"
+attempt 3 TC-03 FAIL | initial="Count: 0" | Decrement->exp -1 got "Count: 1" MISMATCH
+attempt 3 TC-04 FAIL | initial="Count: 0" | Increment->exp 1 got "Count: 1" | Increment->exp 2 got "Count: 2" | Decrement->exp 1 got "Count: 3" MISMATCH
+attempt 3 TC-05 PASS | initial="Count: 0" | Increment->exp 1 got "Count: 1" | Increment->exp 2 got "Count: 2" | Increment->exp 3 got "Count: 3" | Reset->exp 0 got "Count: 0"
+attempt 3 TC-06 FAIL | initial="Count: 0" | Increment->exp 1 got "Count: 1" | Increment->exp 2 got "Count: 2" | Increment->exp 3 got "Count: 3" | Decrement->exp 2 got "Count: 4" MISMATCH | Increment->exp 3 got "Count: 5" MISMATCH | Reset->exp 0 got "Count: 0"
